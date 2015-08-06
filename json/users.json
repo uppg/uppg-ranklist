@@ -1,0 +1,204 @@
+{
+	"users": [
+		{
+			"name": "Carl Dizon",
+			"uva": "squeekeek",
+			"icpcla": "squeekeek",
+			"euler": "squeekeek",
+			"schoolid": "0"
+		},
+		{
+			"name": "Joseph Vincent Chua",
+			"uva": "cloudfrog",
+			"icpcla": "cloudfrog",
+			"euler": "cloudfrog",
+			"schoolid": "0"
+		},
+		{
+			"name": "Marco Vincenzo Karaan",
+			"uva": "mvlkaraan",
+			"icpcla": "mvlkaraan",
+			"euler": "mvlkaraan",
+			"schoolid": "0"
+		},
+		{
+			"name": "Joseph Daniel Dantes",
+			"uva": "jddantes",
+			"icpcla": "jddantes",
+			"euler": "silverpendulum",
+			"schoolid": "0"
+		},
+		{
+			"name": "Marc Patrick Celon",
+			"uva": "Celon",
+			"euler": "lolicaddict",
+			"schoolid": "0"
+		},
+		{
+			"name": "Anne Frances Calceta",
+			"uva": "franny",
+			"icpcla": "franny",
+			"euler": "bananapastry",
+			"schoolid": "0"
+		},
+		{
+			"name": "Kyle Rosales",
+			"uva": "darkpotatoking",
+			"euler": "darkpotatoking",
+			"schoolid": "0"
+			
+		},
+		{
+			"name": "Rene Josiah Quinto",
+			"uva": "1NCID3R",
+			"icpcla": "1NCID3R",
+			"euler": "rjmquinto",
+			"schoolid": "0"
+		},
+		{
+			"name": "Adrian Vidal",
+			"uva": "adrianvidal",
+			"icpcla": "adrianvidal",
+			"euler": "adrianvidal",
+			"schoolid": "0"
+		},
+		{
+			"name": "Williard Joshua Jose",
+			"uva": "williard",
+			"icpcla": "williard",
+			"euler": "williard",
+			"schoolid": "0"
+		},
+		{
+			"name": "Ronaldo Medina",
+			"uva": "particle",
+			"icpcla": "particle",
+			"euler": "particle",
+			"schoolid": "0"
+		},
+		{
+			"name": "Iya Noelle Wijangco",
+			"uva": "iaquerida",
+			"euler": "iaquerida",
+			"schoolid": "0"
+		},
+		{
+			"name": "Jose Daniel Berba",
+			"uva": "Berba",
+			"euler": "pepeberba",
+			"schoolid": "0"
+		},
+		{
+			"name": "Angelina Aquino",
+			"uva": "Synaesthesis",
+			"euler": "Synaesthesis",
+			"schoolid": "0"
+		},
+		{
+			"name": "Jym Paul Carandang",
+			"uva": "jacarandang",
+			"euler": "jacarandang",
+			"schoolid": "0"
+		},
+		{
+			"name": "Carlson Cheng",
+			"uva": "C^2",
+			"schoolid": "0"
+		},
+		{
+			"name": "Ernest Delmo",
+			"uva": "epdelmo",
+			"euler": "epdelmo",
+			"schoolid": "0"
+		},
+		{
+			"name": "Russelle Guadalupe",
+			"uva": "thugzgrammer",
+			"euler": "thugzlover29",
+			"schoolid": "0"
+		},
+		{
+			"name": "Leiko Armand Ravelo",
+			"uva": "llravelo",
+			"euler": "llravelo",
+			"schoolid": "0"
+		},
+		{
+			"name": "Neal Bryan Velasco",
+			"uva": "bonchykels",
+			"euler": "bonchykels",
+			"schoolid": "0"
+		},
+		{
+			"name": "Jherico Gabriel Torres",
+			"uva": "Satohika358",
+			"euler": "Satohika358",
+			"schoolid": "0"
+		},
+		{
+			"name": "Jose Enrico Tiongson",
+			"uva": "Hikari9",
+			"schoolid": "1"
+		},
+		{
+			"name": "Kyle Stephen See",
+			"uva": "kylesky",
+			"schoolid": "1"
+		},
+		{
+			"name": "David Martin Cuajunco",
+			"uva": "derpidc",
+			"schoolid": "1"
+		},
+		{
+			"name": "Job Eliezek Bangayan",
+			"uva": "Kezeile",
+			"schoolid": "1"
+		},
+		{
+			"name": "Jaren Ryan Rex",
+			"uva": "anomalousquark",
+			"schoolid": "1"
+		},
+		{
+			"name": "Hadrian Jules Ang",
+			"uva": "hadrianang",
+			"schoolid": "1"
+		},
+		{
+			"name": "Henry Morco",
+			"uva": "hmorco",
+			"schoolid": "1"
+		},
+		{
+			"name": "Dalzy Mendoza",
+			"uva": "hfunisher",
+			"schoolid": "1"
+		},
+		{
+			"name": "Leona Lao",
+			"uva": "unalone",
+			"schoolid": "1"
+		},
+		{
+			"name": "Miguel Jesus Palma",
+			"uva": "miguel_palma",
+			"schoolid": "1"
+		},
+		{
+			"name": "Vermille Ann Saw",
+			"uva": "veeann",
+			"schoolid": "1"
+		},
+		{
+			"name": "Vernon Gutierrez",
+			"uva": "verngutz",
+			"schoolid": "1"
+		},
+		{
+			"name": "Aldrich Asuncion",
+			"uva": "PPTGamer",
+			"schoolid": "1"
+		}
+	]
+}

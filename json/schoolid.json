@@ -1,0 +1,14 @@
+{
+	"schools": [
+		{
+			"fullname": "University of the Philippines Diliman",
+			"abbr": "UPD",
+			"color": "#7B1113"
+		},
+		{
+			"fullname": "Ateneo de Manila University",
+			"abbr": "ADMU",
+			"color": "#10069F"
+		}
+	]
+}

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>UP Programming Guild OJ Ranklist</title>
+		
+		<meta charset="UTF-8">
+		
+		<link rel="shortcut icon" href="static/icon.png">
+		<link rel="stylesheet" href="style.css">
+		
+		<script type="text/javascript" src="jslib/jquery-2.1.4.min.js"></script>
+		<!-- <script type="text/javascript" src="jslib/jquery.tablesorter.min.js"></script> -->
+		<script type="text/javascript" src="jslib/q.min.js"></script>
+		<script type="text/javascript" src="jslib/get_ranks.js"></script>
+		
+		<script type="text/javascript" src="script.js"></script>
+	</head>
+	
+	<body>
+		<div id="div_sidebar">
+			<div id="div_sidebar_header">
+				<img src="static/logo.svg" alt="Logo" width="50" height="50">
+				<p>
+					University of the Philippines<br>Programming Guild
+				</p>
+			</div>
+		
+			<nav>
+				<dt>Online Judges</dt>
+				<dd>
+					<a href="#div_oj_uva">UVa OJ</a>
+					<a href="#div_oj_icpcla">ACM ICPC Live Archive</a>
+					<a href="#div_oj_euler">Project Euler</a>
+				</dd>
+				
+				<dt>Problem Compare</dt>
+				<dd>
+					<a href="#div_comp_uva">UVa OJ</a>
+					<a href="#div_comp_icpcla">ACM ICPC Live Archive</a>
+				</dd>
+				
+				<dt>Mock Competition</dt>
+				<dd>
+					<a href="#div_mock_probs">Problems</a>
+				</dd>
+				
+				<dt>Information</dt>
+				<dd>
+					<a href="#div_info_help">Help</a>
+					<a href="#div_info_about" class="activePageLink">About</a>
+				</dd>
+			</nav>
+			
+			<div id="div_sidebar_footer">
+				<p>
+					UP Programming Guild &copy;<br>
+				</p>
+				<p>
+					Hosted by the UP EEEI
+					<a href="http://swserver.eee.upd.edu.ph">Smartwire Server</a>
+				</p>
+			</div>
+		</div>
+		
+		<div id="div_header">
+			<div id="div_header_menu">
+				<img id="img_menu" src="static/menu_icon.svg" alt="Menu" width="16" height="16">
+				<span></span>
+			</div>
+		
+			<div id="div_header_text">
+				<h1>Online Judges Ranklist</h1>
+			</div>
+		</div>
+		
+		<div id="div_content">
+			<div id="div_oj_uva">
+				<p>
+					The UVa Online Judge, hosted by the University of Valladolid,
+					hosts hundreds of problems similar to the ones used in
+					programming contests. This is one of the most popular online
+					judges used for honing people's programming and algorithmic
+					skills.
+				</p>
+			
+				<table>
+					<thead>
+						<tr>
+							<th colspan="5">Universidad de Valladolid OJ (UVa)</th>
+						</tr>
+					
+						<tr>
+							<th rowspan="2">Rank</th>
+							<th rowspan="2">Name</th>
+							<th colspan="3">Submissions</th>
+						</tr>
+						
+						<tr>
+							<th>AC</th>
+							<th>WA</th>
+							<th>TL</th>
+						</tr>
+					</thead>
+					
+					<tbody>
+						<tr></tr>
+					</tbody>
+				</table>
+			</div>
+			
+			<div id="div_oj_icpcla">
+				<p>
+					The ACM-ICPC Live Archive hosts hundreds of problems used in
+					the ACM-ICPC Regionals and World Finals.
+				</p>
+			
+				<table>
+					<thead>
+						<tr>
+							<th colspan="5">Baylor University OJ (LA)</th>
+						</tr>
+						
+						<tr>
+							<th rowspan="2">Rank</th>
+							<th rowspan="2">Name</th>
+							<th colspan="3">Submissions</th>
+						</tr>
+						
+						<tr>
+							<th>AC</th>
+							<th>WA</th>
+							<th>TL</th>
+						</tr>
+					</thead>
+					
+					<tbody>
+						<tr></tr>
+					</tbody>
+				</table>
+			</div>
+			
+			<div id="div_oj_euler">
+				<p>
+					Project Euler is a series of challenging
+					mathematical/computer programming problems that will require
+					more than just mathematical insights to solve. Although
+					mathematics will help you arrive at elegant and efficient
+					methods, the use of a computer and programming skills will
+					be required to solve most problems.
+					
+					Project Euler exists to encourage, challenge, and develop
+					the skills and enjoyment of anyone with an interest in the
+					fascinating world of mathematics.
+				</p>
+			
+				<table>
+					<thead>
+						<tr>
+							<th colspan="3">Project Euler (Euler)</th>
+						</tr>
+						
+						<tr>
+							<th>Rank</th>
+							<th>Name</th>
+							<th>Solved</th>
+						</tr>
+					</thead>
+					
+					<tbody>
+						<tr></tr>
+					</tbody>
+				</table>
+			</div>
+			
+			<div id="div_comp_uva">
+				<p>
+					You can type a UVa problem ID in the text box below and check
+					which persons in that ranklist solved that problem.
+				</p>
+				
+				<form>
+					<input type="text" placeholder="UVa Problem ID">
+					<button>Compare!</button>
+				</form>
+			</div>
+			
+			<div id="div_comp_icpcla">
+				<p>
+					You can type an LA problem ID in the text box below and check
+					which persons in that ranklist solved that problem.
+				</p>
+				
+				<form>
+					<input type="text" placeholder="LA Problem ID">
+					<button>Compare!</button>
+				</form>
+			</div>
+			
+			<div id="div_mock_probs">
+				<p>
+					Problems solved during the mock competitions every Saturday
+					are shown here. You can download the problem statements and
+					their corresponding judge input and output. All of the
+					problems from the competitions are taken from past ACM ICPC
+					competitions among the Preliminary, Regional, and World Final
+					events.
+				</p>
+
+				<dt>August 1, 2015</dt>
+				<dd>1st Iran Nationwide Internet Programming Contest (2002)</dd>
+				<ul>
+					<li>A: Packing Unit 4D Cubes</li>
+					<li>B: The Fun Number System</li>
+					<li>C: Communication System</li>
+					<li>D: Number Sequence</li>
+					<li>E: Anniversary Cake</li>
+					<li>F: Tester Program</li>
+					<li>G: 2D-Nim</li>
+				</ul>
+				
+				<dt>July 27, 2015</dt>
+				<dd>4th Iran Internet Programming Contest (2006)</dd>
+				<ul>
+					<li>A: The Idiot of the Year Contest!</li>
+					<li>B: Parsing Real Numbers</li>
+					<li>C: Co-workers from Hell</li>
+					<li>D: Connected Gheeves</li>
+					<li>E: Rotating Scoreboard</li>
+					<li>F: ACM Underground</li>
+					<li>G: Expression Evaluator</li>
+					<li>H: Rectangle Cutting</li>
+				</ul>
+			</div>
+			
+			<div id="div_info_help">
+				<p>
+					You need help?
+				</p>
+				
+				<p>
+					Great.
+				</p>
+				
+				<p>
+					There are three submenus in this website. The first is the
+					"Online Judges" one. You will see here the ranks of each member
+					of the Guild relative to each other. The "Problem Compare"
+					submenu lets you type a list of problem IDs and check the
+					people who solved those problems. Use that to find out which
+					problems you can probably solve, or problems other can't
+					solve yet.
+				</p>
+			</div>
+			
+			<div id="div_info_about">
+				<p>
+					This site shows the real-time rankings
+					of UPPG members in several popular competitive coding
+					online judges. Click on the sidebar menu to pick an
+					online judge rank.
+				</p>
+				
+				<p>
+					For correspondence related to this web application, you can
+					e-mail Carl's UPPG mail account. Send a mail if you want to
+					add or correct your own usernames in the ranklist, provided
+					that you're part of the Guild. You can also suggest other OJs
+					to add as long as they have an API for the number of problems
+					solved.
+				</p>
+			</div>
+			
+			<div id="div_content_loader">
+				<img src="static/loader.gif" alt="Fetching Data..." width="50" height="50">
+			</div>
+		</div>
+	</body>
+</html>
