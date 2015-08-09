@@ -82,15 +82,20 @@
 					$(eObj.target).addClass("mainNavSelect");
 				}
 			}
-			else {
+			else if($(eObj.target).parents().is("nav")) {
 				// A link was clicked!
-				var div_jq = $($(eObj.target).attr("href"));
 				eObj.preventDefault();
+				
+				var div_jq = $($(eObj.target).attr("href"));
 				
 				$("#div_content")
 					.children().not(div_jq)
 					.hide();
 				div_jq.fadeIn(250);
+			
+				// Emphasize link
+				sidebar_jq.find("a").removeClass("activePageLink");
+				$(eObj.target).addClass("activePageLink");
 				
 				// Check if link points to one of the OJ divs
 				if(div_jq.index() >= 0 && div_jq.index() <= 2) {
@@ -119,12 +124,79 @@
 							div_jq.children("table").fadeIn(250);
 						});
 				}
-				
-				// Emphasize link
-				sidebar_jq.find("a").removeClass("activePageLink");
-				$(eObj.target).addClass("activePageLink");
+			}
+			else if($(eObj.target).parents().is("#p_sudo_link")) {
+				// Account management
+				Q.all([$.getScript("jslib/sha256-min.js"), $.getScript("jslib/taffy-min.js")])
+				.then(function() {
+					return Q.when($.ajax("json/users_admin.json", {"dataType": "json"}))
+							.then(TAFFY);
+				})
+				.then(function(useradmin_db) {
+					// Check passphrase
+					if(typeof Cookies.get("SESSID") !== "undefined") {
+						console.log("Logging-out...");
+						
+						// Remove to session database
+						// $.ajax("manage_json.php?t=r&f=userlog&sessid=" + Cookies.get("SESSID"));
+						Cookies.remove("SESSID");
+						
+						$("#div_sidebar #p_sudo_link span").text("Not logged-in");
+						$("#div_sidebar #p_sudo_link a").text("Log-in");
+					}
+					else {
+						var hash = Sha256.hash(prompt("Please enter the passphrase"));
+						var resultSet = useradmin_db({"pass": hash});
+						
+						if(resultSet.count() == 1) {
+							var userInfo = resultSet.first();
+							var nowDate = new Date().toUTCString();
+							var dHash = Sha256.hash(userInfo.name + nowDate + userInfo.pass);
+							var logInfo = {};
+							
+							console.log("Successfully logged-in as " + userInfo.name + "!");
+							$("#div_sidebar #p_sudo_link span").text(userInfo.name);
+							$("#div_sidebar #p_sudo_link a").text("Log-out");
+							
+							// Set a cookie
+							Cookies.set("SESSID", dHash, {expires: 1});
+							logInfo["sessid"] = dHash;
+							logInfo["logind"] = nowDate;
+							logInfo["user"] = userInfo.name;
+							
+							// Write to session database
+							$.ajax("manage_json.php?t=w&f=userlog&s=" + JSON.stringify(logInfo));
+						}
+						else {
+							alert("Passphrase matches no account. :(");
+							throw new Error("Invalid passphrase");
+						}
+					}
+				})
+				.then(null, console.log);
 			}
 		});
+		
+		// Check login cookie for first run
+		if(typeof Cookies.get("SESSID") !== "undefined") {
+			Q.when($.getScript("jslib/taffy-min.js"))
+				.then(function() {
+					return Q.when($.ajax("json/userlog.json", {"dataType": "json"}))
+							.then(TAFFY);
+				})
+				.then(function(userlogs_db) {
+					var resultSet = userlogs_db({"sessid": Cookies.get("SESSID")});
+					
+					if(resultSet.count() == 1) {
+						var aUser = resultSet.first();
+					
+						console.log("Session cookie detected for user " + aUser.user + "!");
+						$("#div_sidebar #p_sudo_link span").text(aUser.user);
+						$("#div_sidebar #p_sudo_link a").text("Log-out");
+					}
+				})
+				.then(null, console.log);
+		}
 		
 		// Tablesorter
 		// $("table").tablesorter();

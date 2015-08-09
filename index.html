@@ -9,10 +9,12 @@
 		<link rel="shortcut icon" href="static/icon.png">
 		<link rel="stylesheet" href="style.css">
 		
+		<!-- So much JS files :( -->
 		<script type="text/javascript" src="jslib/jquery-2.1.4.min.js"></script>
 		<!-- <script type="text/javascript" src="jslib/jquery.tablesorter.min.js"></script> -->
 		<script type="text/javascript" src="jslib/q.min.js"></script>
-		<script type="text/javascript" src="jslib/get_ranks.js"></script>
+		<script type="text/javascript" src="jslib/js-cookie.js"></script>
+		<script type="text/javascript" src="jslib/get-ranks.js"></script>
 		
 		<script type="text/javascript" src="script.js"></script>
 	</head>
@@ -45,6 +47,11 @@
 					<a href="#div_mock_probs">Problems</a>
 				</dd>
 				
+				<dt>Admin Things</dt>
+				<dd>
+					<a href="#div_admin_mock">Mock Information</a>
+				</dd>
+				
 				<dt>Information</dt>
 				<dd>
 					<a href="#div_info_help">Help</a>
@@ -59,6 +66,10 @@
 				<p>
 					Hosted by the UP EEEI
 					<a href="http://swserver.eee.upd.edu.ph">Smartwire Server</a>
+				</p>
+				<p id="p_sudo_link">
+					<span>Not logged-in</span> | 
+					<a href="#">Log-in</a>
 				</p>
 			</div>
 		</div>
@@ -309,6 +320,9 @@
 					<li>J: Poker Hands</li>
 				</ul>
 				-->
+			</div>
+			
+			<div id="div_admin_mock">
 			</div>
 			
 			<div id="div_info_help">

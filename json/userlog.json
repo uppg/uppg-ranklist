@@ -1,0 +1,22 @@
+[
+    {
+        "sessid": "2facd33e30b272cdb9971fae8cf791c4597331248e06232da76c3ddb929e2398",
+        "logind": "Sun, 09 Aug 2015 03:32:44 GMT",
+        "user": "Carl Dizon"
+    },
+    {
+        "sessid": "60cfa7a71a94e5004aa7e879b7a875f90ad42706247bbb193704fdeb2b8db62c",
+        "logind": "Sun, 09 Aug 2015 15:00:28 GMT",
+        "user": "Carl Dizon"
+    },
+    {
+        "sessid": "b99bd726eb09be528e51bab772af3e39f0c7c3452dceb7a5d1a7b81d98df8502",
+        "logind": "Sun, 09 Aug 2015 15:01:24 GMT",
+        "user": "Carl Dizon"
+    },
+    {
+        "sessid": "be9fe247ddfedb12c4033c7b40f39678a738db6c56cb575d4503a4869a8b56c3",
+        "logind": "Sun, 09 Aug 2015 15:01:37 GMT",
+        "user": "Carl Dizon"
+    }
+]

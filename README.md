@@ -16,7 +16,7 @@ The file hierarchy is shown below:
 ```
 uppg_ranklist
 |-- jslib
-  |-> get_ranks.js
+  |-> get-ranks.js
   |-> jquery-2.1.4.min.js
   |-> q.min.js
   |-> jquery.tablesorter.min.js
@@ -31,7 +31,7 @@ uppg_ranklist
 |-> style.css
 ```
 
-Data of OJs are parsed using `euler_json.php`, `jslib/get_ranks.js`, and `script.js`. User and school databases are located
+Data of OJs are parsed using `euler_json.php`, `jslib/get-ranks.js`, and `script.js`. User and school databases are located
 in the `json` folder. The other files are library files or for HTML display purposes.
 
 ## Live Website
