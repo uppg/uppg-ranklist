@@ -133,12 +133,12 @@
 							.then(TAFFY);
 				})
 				.then(function(useradmin_db) {
-					// Check passphrase
 					if(typeof Cookies.get("SESSID") !== "undefined") {
+						// Has cookie
 						console.log("Logging-out...");
 						
 						// Remove to session database
-						// $.ajax("manage_json.php?t=r&f=userlog&sessid=" + Cookies.get("SESSID"));
+						$.post("manage_login.php", {t: "r", f: "sessions", sessid: Cookies.get("SESSID")});
 						Cookies.remove("SESSID");
 						
 						$("#div_sidebar #p_sudo_link span").text("Not logged-in");
@@ -152,20 +152,18 @@
 							var userInfo = resultSet.first();
 							var nowDate = new Date().toUTCString();
 							var dHash = Sha256.hash(userInfo.name + nowDate + userInfo.pass);
-							var logInfo = {};
-							
-							console.log("Successfully logged-in as " + userInfo.name + "!");
-							$("#div_sidebar #p_sudo_link span").text(userInfo.name);
-							$("#div_sidebar #p_sudo_link a").text("Log-out");
-							
-							// Set a cookie
-							Cookies.set("SESSID", dHash, {expires: 1});
-							logInfo["sessid"] = dHash;
-							logInfo["logind"] = nowDate;
-							logInfo["user"] = userInfo.name;
+							var logInfo = {sessid: dHash, logind: nowDate, user: userInfo.name};
 							
 							// Write to session database
-							$.ajax("manage_json.php?t=w&f=userlog&s=" + JSON.stringify(logInfo));
+							return Q.when($.post("manage_login.php", {t: "w", f: "sessions", d: nowDate, s: JSON.stringify(logInfo)}))
+									.then(function(resultJson) {
+										// Set a cookie
+										Cookies.set("SESSID", resultJson["sessid"], {expires: 1});
+										
+										console.log("Successfully logged-in as " + userInfo.name + "!");
+										$("#div_sidebar #p_sudo_link span").text(userInfo.name);
+										$("#div_sidebar #p_sudo_link a").text("Log-out");
+									});
 						}
 						else {
 							alert("Passphrase matches no account. :(");
@@ -181,11 +179,12 @@
 		if(typeof Cookies.get("SESSID") !== "undefined") {
 			Q.when($.getScript("jslib/taffy-min.js"))
 				.then(function() {
-					return Q.when($.ajax("json/userlog.json", {"dataType": "json"}))
+					return Q.when($.ajax("json/sessions.json", {"dataType": "json"}))
 							.then(TAFFY);
 				})
 				.then(function(userlogs_db) {
 					var resultSet = userlogs_db({"sessid": Cookies.get("SESSID")});
+					console.log(Cookies.get("SESSID"));
 					
 					if(resultSet.count() == 1) {
 						var aUser = resultSet.first();
