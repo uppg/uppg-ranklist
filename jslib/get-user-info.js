@@ -11,6 +11,28 @@ function getUserData() {
 	return Q.when($.ajax("json/users.json"));
 }
 
+/*
+function getSolvedBits(serviceId) {
+	var userDataPromise = getUserData();
+	
+	return userDataPromise.then(function(userInfos) {
+		var users = userInfos.users;
+		var promiseArray = ;
+		
+		users.forEach(function(v, k) {
+			if(!v.hasOwnProperty(apiNameId[serviceId])) {
+				return;
+			}
+			
+			var aPromise = 	Q.when($.ajax(apiUrls[serviceId] + "/api/uname2uid/" + v[apiNameId[serviceId]]))
+								.then(function(userId) {
+									
+								});
+		});
+	});
+}
+*/
+
 function getUserRanksUhunt(userInfos, serviceId) {
 	var users = userInfos.users;
 	var promiseArray = [];
@@ -207,3 +229,20 @@ function getRanklistDeferred(serviceId) {
 				.then(null, console.error);
 	}
 }
+
+/*
+function getCommonSolvedDeferred(problemNum, serviceId) {
+	if(serviceId >= 2) {
+		return;
+	}
+	
+	var userDataPromise = getSolvedBits(serviceId);
+	var probNum2IdPromise = Q.when($.ajax(apiUrls[serviceId] + "/api/p/num/" + problemNum));
+	
+	Q.all([userDataPromies, probNum2IdPromise]).then(function(userInfos, probInfo) {
+		var probId = probInfo.pid;
+		var userArray = userInfos.users;
+	})
+	.then(null, console.error);
+}
+*/

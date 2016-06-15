@@ -195,7 +195,7 @@
 					}
 				})
 				.then(null, console.log);
-		}
+				}
 		
 		// Tablesorter
 		// $("table").tablesorter();

@@ -9,7 +9,7 @@ this using any webserver.
 This ranklist gets data from the UVa OJ, ACM ICPC Live Archive, and Project Euler. You can also suggest other OJs to add
 provided that they have an API for the number of solved problems for a specific username.
 
-**NOTE: The ranklist for Euler doesn't work since the website's database is broken.**
+**NOTE: Some features are not yet implemented. Please don't expect. :)**
 
 ## Contributing
 The file hierarchy is shown below:
